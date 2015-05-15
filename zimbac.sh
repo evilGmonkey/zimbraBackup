@@ -10,8 +10,9 @@
 # the destination directory for local backups
 DESTLOCAL=/opt/backup/backup-zimbra
 # the destination for remote backups
-DESTREMOTE="cos-dr.uhurunet.com:/backup/backup-zimbra"
-
+DESTREMOTE="$1:/backup/backup-zimbra"
+echo $DESTREMOTE
+exit
 # Outputs the time the backup started, for log/tracking purposes
 echo Time backup started = $(date +%T)
 before="$(date +%s)"
